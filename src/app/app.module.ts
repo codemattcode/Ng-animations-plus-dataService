@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { DataService } from './data.service';
+
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -15,7 +18,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

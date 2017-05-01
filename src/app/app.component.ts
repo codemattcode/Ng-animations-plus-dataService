@@ -1,29 +1,23 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 @Component({
   selector: 'app-root',
   template: `
-    <p [style.color]="goBlue">{{txt}}</p>
-
-    <p [style.color]=" txtStyle ? 'white' : 'purple' ">conditional code</p>
-
-    <p [ngStyle]="txtStyles">ngStyle</p>
+    <p>{{txt}}</p>
   `,
   styles: [`
     p {
-      font-size: 3em;
+      font-size: 1.5em;
+      color: white;
     }
   `]
 })
 
 export class AppComponent {
-  txt = 'getting those numbers up';
 
-  goBlue = 'blue';
-  
-  
-
-  txtStyles = {
-    'text-decoration' : 'underline',
-    'font-weight': 'bold'
+  constructor(private dataService:DataService){
+    
   }
+
+  txt = 'what is the message?';
 }
