@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  txt = 'sumthin';
+  txt = 'getting those numbers up';
 
   goBlue = 'blue';
   
