@@ -20,7 +20,7 @@ export class AppComponent {
 
   goBlue = 'blue';
   
-  txtStyle = true;
+  
 
   txtStyles = {
     'text-decoration' : 'underline',
