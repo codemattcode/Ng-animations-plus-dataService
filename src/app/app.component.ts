@@ -24,7 +24,7 @@ export class AppComponent {
   txt:string = '';
 
   ngOnInit(){
-    this.arr = this.dataService.names[1];
+    this.arr = this.dataService.names[0];
 
     this.txt = this.dataService.myData();
   }
