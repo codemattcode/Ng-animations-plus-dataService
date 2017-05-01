@@ -16,8 +16,16 @@ import { DataService } from './data.service';
 export class AppComponent {
 
   constructor(private dataService:DataService){
-    
+
   }
 
-  txt = 'what is the message?';
+  txt:string = '';
+
+  ngOnInit(){
+    console.log(this.dataService.names);
+
+    this.txt = this.dataService.myData();
+  }
+
+  
 }
