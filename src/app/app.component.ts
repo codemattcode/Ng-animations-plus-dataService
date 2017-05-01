@@ -2,19 +2,28 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <p (click)='changeClass()'>{{title}}</p>
+    <p [style.color]="goBlue">{{txt}}</p>
+
+    <p [style.color]=" txtStyle ? 'white' : 'purple' ">conditional code</p>
+
+    <p [ngStyle]="txtStyles">ngStyle</p>
   `,
   styles: [`
     p {
-      color: white;
       font-size: 3em;
     }
   `]
 })
 
 export class AppComponent {
-  title = 'this is new'
-  changeClass(){
-    this.title = 'golden oldie'; 
+  txt = 'style.color';
+
+  goBlue = 'blue';
+  
+  txtStyle = true;
+
+  txtStyles = {
+    'text-decoration' : 'underline',
+    'font-weight': 'bold'
   }
 }
