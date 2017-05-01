@@ -3,6 +3,7 @@ import { DataService } from './data.service';
 @Component({
   selector: 'app-root',
   template: `
+    <p>{{arr}}</p>
     <p>{{txt}}</p>
   `,
   styles: [`
@@ -19,10 +20,11 @@ export class AppComponent {
 
   }
 
+  arr:string = '';
   txt:string = '';
 
   ngOnInit(){
-    console.log(this.dataService.names);
+    this.arr = this.dataService.names[1];
 
     this.txt = this.dataService.myData();
   }

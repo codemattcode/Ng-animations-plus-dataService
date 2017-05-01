@@ -6,7 +6,7 @@ export class DataService {
 
   constructor() { }
     names = [
-      'fred', 'amy', 'dave', 'margaret'
+      'Fred', 'Amy', 'Dave', 'Margaret'
     ];
 
     myData() {
