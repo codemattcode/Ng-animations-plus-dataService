@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  txt = 'style.color';
+  txt = 'sumthin';
 
   goBlue = 'blue';
   
