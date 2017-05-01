@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  template: `
+    <p (click)='changeClass()'>{{title}}</p>
+  `,
+  styles: [`
+    p {
+      color: white;
+      font-size: 3em;
+    }
+  `]
 })
+
 export class AppComponent {
-  title = 'Busting our guts to make beautiful user experiences!';
-  lime: ['this', 'that', 'the other'];
+  title = 'this is new'
+  changeClass(){
+    this.title = 'golden oldie'; 
+  }
 }
