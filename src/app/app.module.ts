@@ -7,10 +7,12 @@ import { DataService } from './data.service';
 
 
 import { AppComponent } from './app.component';
+import { AnimationsComponent } from './animations.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AnimationsComponent
   ],
   imports: [
     BrowserModule,
