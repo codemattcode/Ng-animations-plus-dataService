@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-animations',
-  templateUrl: './animations.component.html',
-  styleUrls: ['./animations.component.sass']
+  template: `
+  
+  `,
+  styles: ['']
 })
 export class AnimationsComponent implements OnInit {
 
