@@ -5,6 +5,8 @@ import { DataService } from './data.service';
   template: `
     <p>{{arr}}</p>
     <p>{{txt}}</p>
+    <hr>
+    <app-animations></app-animations>
   `,
   styles: [`
     p {
