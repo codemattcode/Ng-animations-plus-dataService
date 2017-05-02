@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
+import { Component } from '@angular/core';
+import { trigger, state, style, transition, animate,keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-animations',
   template: `
     <div>
-    <p>Animations</p>
+     <p [@myAni]=mystate (click)="animateMe()">I will animate</p>
     </div>
   `,
   styles: [
@@ -21,22 +21,22 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
   ],
   animations: [
     trigger('myAni', [
-
-      state('small', style({
-        transform: 'scale(1)',
-      })),
-      state('large', style({
-        transform: 'scale(2)',
-      })),
-
+        state('small', style({
+            transform: 'scale(1)',
+        })),
+        state('large', style({
+            transform: 'scale(1.2)',
+        })),
+        transition('small => large', animate('100ms ease-in')),
     ]),
   ]
 })
-export class AnimationsComponent implements OnInit {
+export class AnimationsComponent {
 
-  constructor() { }
+  mystate: string = 'small';
 
-  ngOnInit() {
+  animateMe() {
+        this.mystate = (this.mystate === 'small' ? 'large' : 'small');
   }
 
 }
