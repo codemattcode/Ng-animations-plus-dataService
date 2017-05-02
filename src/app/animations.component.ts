@@ -5,7 +5,7 @@ import { trigger, state, style, transition, animate,keyframes } from '@angular/a
   selector: 'app-animations',
   template: `
     <div>
-     <p [@myAni]=mystate (click)="animateMe()">I will animate</p>
+     <p [@myAni]=myState (click)="animateMe()">I will animate</p>
     </div>
   `,
   styles: [
@@ -33,10 +33,10 @@ import { trigger, state, style, transition, animate,keyframes } from '@angular/a
 })
 export class AnimationsComponent {
 
-  mystate: string = 'small';
+  myState: string = 'small';
 
   animateMe() {
-        this.mystate = (this.mystate === 'small' ? 'large' : 'small');
+        this.myState = (this.myState === 'small' ? 'large' : 'small');
   }
 
 }
