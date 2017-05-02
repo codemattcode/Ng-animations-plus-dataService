@@ -27,7 +27,7 @@ import { trigger, state, style, transition, animate,keyframes } from '@angular/a
         state('large', style({
             transform: 'translateY(30px)',
         })),
-        transition('small => large', animate('100ms ease-in')),
+        transition('small <=> large', animate('100ms ease-in')),
     ]),
   ]
 })
