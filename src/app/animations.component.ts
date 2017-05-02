@@ -14,7 +14,7 @@ import { trigger, state, style, transition, animate,keyframes } from '@angular/a
       padding: 20px;
     }
     p {
-      font-size: 2em;
+      font-size: 1em;
       color: white;
     }
     `
