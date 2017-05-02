@@ -14,7 +14,7 @@ import { trigger, state, style, transition, animate,keyframes } from '@angular/a
       padding: 20px;
     }
     p {
-      font-size: 1em;
+      font-size: 2trem;
       color: white;
     }
     `
@@ -22,10 +22,10 @@ import { trigger, state, style, transition, animate,keyframes } from '@angular/a
   animations: [
     trigger('myAni', [
         state('small', style({
-            transform: 'scale(1)',
+            transform: 'translateY(10px)',
         })),
         state('large', style({
-            transform: 'scale(1.2)',
+            transform: 'translateY(30px)',
         })),
         transition('small => large', animate('100ms ease-in')),
     ]),
