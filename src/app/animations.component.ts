@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger,state,style,transition,animate,keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-animations',
@@ -17,6 +18,18 @@ import { Component, OnInit } from '@angular/core';
       color: white;
     }
     `
+  ],
+  animations: [
+    trigger('myAni', [
+
+      state('small', style({
+        transform: 'scale(1)',
+      })),
+      state('large', style({
+        transform: 'scale(2)',
+      })),
+
+    ]),
   ]
 })
 export class AnimationsComponent implements OnInit {
